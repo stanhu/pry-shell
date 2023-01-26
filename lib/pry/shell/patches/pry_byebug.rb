@@ -38,7 +38,7 @@ begin
       end
 
       def start_new_pry_session
-        @pry = Pry.start_without_pry_byebug(frame._binding, Pry::Shell.active_shell_options)
+        @pry = Pry::REPL.start_without_pry_byebug(frame._binding, Pry::Shell.active_shell_options)
       end
 
       def start_new_pry_repl
